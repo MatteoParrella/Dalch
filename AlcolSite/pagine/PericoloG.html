@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAZARD REPORT | Gin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+            --danger-red: #ff3b30;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--danger-red);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .risk-level {
+            text-align: right;
+            border-left: 1px solid var(--border-color);
+            padding-left: 20px;
+        }
+
+        .risk-level small {
+            color: var(--text-dim);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+        }
+
+        .risk-level div {
+            color: var(--danger-red);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .hazard-card p {
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .regulation-box {
+            background: var(--bg-box);
+            border: 1px solid var(--danger-red);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .regulation-box h3 {
+            color: var(--danger-red);
+            font-size: 0.9rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+
+        .fade-in {
+            animation: fadeInPage 1s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <div>
+        <span class="classification-tag">Hazard Assessment — Archive #GIN-H</span>
+        <h1>Hazard <br>Analysis</h1>
+    </div>
+    <div class="risk-level">
+        <small>EXPOSURE RISK</small>
+        <div>HIGH</div>
+    </div>
+</header>
+
+<main>
+    <div class="analysis-grid">
+
+        <section class="hazard-card">
+            <h3 class="section-title">01. Infiammabilità</h3>
+            <p>
+                L’elevato contenuto di etanolo rende il gin
+                una sostanza facilmente infiammabile.
+                I vapori alcolici possono incendiarsi
+                in presenza di fiamme libere o superfici surriscaldate.
+            </p>
+        </section>
+
+        <section class="hazard-card">
+            <h3 class="section-title">02. Effetti Neurochimici</h3>
+            <p>
+                Il gin agisce come depressore del sistema nervoso centrale,
+                modulando i recettori GABA-A.
+                Ciò provoca riduzione dei riflessi,
+                alterazione della coordinazione motoria
+                e compromissione delle capacità cognitive.
+            </p>
+        </section>
+
+        <section class="hazard-card">
+            <h3 class="section-title">03. Stress Epatometabolico</h3>
+            <p>
+                Il metabolismo dell’etanolo genera acetaldeide,
+                sostanza citotossica.
+                Un’esposizione cronica può causare
+                accumulo lipidico nel fegato,
+                infiammazione e danni strutturali progressivi.
+            </p>
+        </section>
+
+        <section class="hazard-card">
+            <h3 class="section-title">04. Interazioni Botaniche</h3>
+            <p>
+                Alcune botaniche utilizzate nel gin
+                contengono terpeni e oli essenziali bioattivi.
+                In soggetti sensibili possono verificarsi
+                irritazioni gastriche o reazioni avverse
+                se consumato in quantità elevate.
+            </p>
+        </section>
+
+    </div>
+
+    <div class="regulation-box">
+        <h3>Normative e Limitazioni</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 0;">
+            Il consumo di gin è regolato dalle normative sanitarie nazionali.
+            L’accesso è vietato ai minori di 18 anni
+            a causa degli effetti documentati sul sistema nervoso
+            e sullo sviluppo fisiologico.
+        </p>
+    </div>
+</main>
+
+<a href="../index.html" class="back-link">← Return to Database</a>
+
+</body>
+</html>

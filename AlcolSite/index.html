@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Archive | Premium Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <div class="video-background">
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source id="video-source" src="video/Clase_Azul_M_xico_The_...mp4" type="video/mp4">
+            Il tuo browser non supporta il video.
+        </video>
+        <div class="overlay"></div> </div>
+
+    <aside class="side-nav">
+        <div class="side-nav-header">ARCHIVE INDEX</div>
+        <div id="bottle-list" class="bottle-list"></div>
+    </aside>
+
+    <header class="ui-header">
+        <h1 id="bottle-name">AZUL TEQUILA</h1>
+    </header>
+
+    <main class="content-container">
+        </main>
+
+    <button class="nav-btn prev" onclick="cambiaBottiglia(-1)">&#8249;</button>
+    <button class="nav-btn next" onclick="cambiaBottiglia(1)">&#8250;</button>
+
+    <nav class="action-buttons">
+        <button class="btn-modern" onclick="switchTab('storia')">
+            <span class="btn-text">HISTORY</span>
+        </button>
+        <button class="btn-modern" onclick="switchTab('chimica')">
+            <span class="btn-text">PRODUCTION</span>
+        </button>
+        <button class="btn-modern danger" onclick="switchTab('pericolo')">
+            <span class="btn-text">SAFETY</span>
+        </button>
+    </nav>
+    <div class="signature">
+    POWERED BY <span>MATTEO PARRELLA</span>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

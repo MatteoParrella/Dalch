@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY REPORT | Gin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .timeline-box {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+        }
+
+        .timeline-box p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+
+        .fade-in {
+            animation: fadeInPage 1s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <span class="classification-tag">Historical Record — Archive #GIN-H</span>
+    <h1>History <br>of Gin</h1>
+</header>
+
+<main>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3 class="section-title">Origini Mediche</h3>
+            <p>
+                Il gin nasce nel XVII secolo nei Paesi Bassi
+                come preparato medicinale noto come “Genever”.
+                L’alcol veniva aromatizzato con bacche di ginepro,
+                utilizzate per le loro presunte proprietà diuretiche
+                e depurative.
+            </p>
+            <p>
+                Il distillato era inizialmente impiegato
+                come rimedio per disturbi renali e digestivi,
+                prima di essere adottato come bevanda ricreativa.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Diffusione in Inghilterra</h3>
+            <p>
+                Nel tardo XVII secolo, il gin viene introdotto
+                in Inghilterra durante il regno di Guglielmo III.
+                Le restrizioni sulle importazioni di brandy francese
+                favoriscono la produzione locale di distillati.
+            </p>
+            <p>
+                Il gin diventa rapidamente una bevanda popolare,
+                grazie al basso costo e alla semplicità produttiva.
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-box">
+        <h3 class="section-title">Il Periodo della “Gin Craze”</h3>
+        <p>
+            Tra il 1720 e il 1750, Londra vive un’esplosione
+            di consumo nota come “Gin Craze”.
+            Il consumo incontrollato provoca gravi problemi sociali,
+            sanitari e criminali.
+        </p>
+        <p>
+            Le autorità rispondono con una serie di Gin Acts,
+            leggi che regolamentano la produzione e la vendita,
+            ponendo le basi per una distillazione più controllata
+            e di qualità.
+        </p>
+    </div>
+
+    <div class="info-card" style="margin-top: 50px;">
+        <h3 class="section-title">Evoluzione Moderna</h3>
+        <p>
+            Nel XIX secolo, l’introduzione della distillazione a colonna
+            permette la produzione di gin più puro e secco,
+            dando origine allo stile London Dry Gin.
+        </p>
+        <p>
+            Oggi il gin è un distillato globale,
+            reinterpretato attraverso botaniche locali
+            e tecniche artigianali,
+            mantenendo il ginepro come elemento dominante.
+        </p>
+    </div>
+
+</main>
+
+<a href="../index.html" class="back-link">← Return to Archive</a>
+
+</body>
+</html>

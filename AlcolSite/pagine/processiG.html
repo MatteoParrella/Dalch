@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROCESS REPORT | Gin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 60px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child {
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec-row span:last-child {
+            color: var(--text-main);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 60px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+
+        .fade-in {
+            animation: fadeInPage 1s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <span class="classification-tag">Process Engineering File — Archive #GIN-P</span>
+    <h1>Gin <br>Production</h1>
+</header>
+
+<main>
+
+    <div class="technical-spec">
+        <h3 class="section-title">Parametri di Base</h3>
+        <div class="spec-row">
+            <span>Materia Prima</span>
+            <span>Alcol neutro di origine agricola</span>
+        </div>
+        <div class="spec-row">
+            <span>Fonte Alcolica</span>
+            <span>Cereali / Melassa</span>
+        </div>
+        <div class="spec-row">
+            <span>Botanica Dominante</span>
+            <span>Bacche di Ginepro</span>
+        </div>
+        <div class="spec-row">
+            <span>Gradazione Finale</span>
+            <span>37.5 – 47% Vol.</span>
+        </div>
+    </div>
+
+    <div class="grid-layout">
+
+        <div class="info-card">
+            <h3 class="section-title">Preparazione dell’Alcol Base</h3>
+            <p>
+                La produzione del gin inizia con un alcol neutro
+                ad alta gradazione, ottenuto tramite fermentazione
+                di cereali o sottoprodotti zuccherini.
+                La distillazione multipla consente
+                l’eliminazione delle impurità aromatiche.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Aromatizzazione Botanica</h3>
+            <p>
+                Le botaniche vengono introdotte attraverso
+                macerazione diretta, infusione a vapore
+                o combinazioni dei due metodi.
+                Il ginepro deve rimanere l’aroma predominante
+                per la classificazione legale come gin.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Distillazione</h3>
+            <p>
+                Il liquido aromatizzato viene ridistillato
+                in alambicchi discontinui o colonne.
+                Durante il processo si separano teste, cuore e code,
+                preservando solo la frazione centrale più pura.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Diluzione e Stabilizzazione</h3>
+            <p>
+                Dopo la distillazione, il gin viene diluito
+                con acqua demineralizzata fino alla gradazione finale.
+                Il prodotto viene filtrato per garantire
+                limpidezza e stabilità prima dell’imbottigliamento.
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+<a href="../index.html" class="back-link">← Return to Archive</a>
+
+</body>
+</html>

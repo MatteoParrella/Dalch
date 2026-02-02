@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATI PROCESSO | Produzione Champagne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child { 
+            color: var(--text-dim); 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+
+        .spec-row span:last-child { 
+            color: var(--text-main);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <span class="classification-tag">Process Engineering File — Archive #022-C</span>
+    <h1>Produzione <br>Moët &amp; Chandon</h1>
+</header>
+
+<main>
+    <div class="technical-spec">
+        <h3 class="section-title">Parametri Enologici</h3>
+        <div class="spec-row">
+            <span>Denominazione</span>
+            <span>Champagne AOC</span>
+        </div>
+        <div class="spec-row">
+            <span>Vitigni Principali</span>
+            <span>Pinot Noir, Pinot Meunier, Chardonnay</span>
+        </div>
+        <div class="spec-row">
+            <span>Metodo</span>
+            <span>Méthode Traditionnelle</span>
+        </div>
+        <div class="spec-row">
+            <span>Gradazione Alcolica</span>
+            <span>≈ 12% vol.</span>
+        </div>
+        <div class="spec-row">
+            <span>Affinamento sui Lieviti</span>
+            <span>Min. 24 mesi (non millesimato)</span>
+        </div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3 class="section-title">Vinificazione Primaria</h3>
+            <p>
+                Le uve vengono raccolte manualmente e pressate delicatamente
+                per ottenere il mosto fiore.
+                La fermentazione alcolica avviene in vasche di acciaio inox
+                a temperatura controllata, preservando freschezza e acidità.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Assemblaggio</h3>
+            <p>
+                I vini base provenienti da diverse parcelle e annate
+                vengono assemblati per garantire uno stile costante.
+                Una parte significativa di vini di riserva
+                contribuisce alla continuità del profilo sensoriale.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3 class="section-title">Presa di Spuma</h3>
+            <p>
+                Dopo l’imbottigliamento, l’aggiunta del liqueur de tirage
+                innesca la seconda fermentazione in bottiglia.
+                L’anidride carbonica prodotta rimane disciolta,
+                formando la caratteristica effervescenza.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Affinamento e Remuage</h3>
+            <p>
+                Le bottiglie maturano sui lieviti nelle cantine sotterranee.
+                Il remuage progressivo consente la raccolta dei sedimenti
+                nel collo della bottiglia, preparando il vino alla sboccatura.
+            </p>
+        </div>
+    </div>
+
+    <div class="info-card" style="margin-top: 40px;">
+        <h3 class="section-title">Sboccatura e Dosaggio</h3>
+        <p>
+            Dopo la sboccatura (dégorgement), viene aggiunto il liqueur d’expédition,
+            determinando lo stile finale (Brut, Extra-Brut, ecc.).
+            Segue il riposo post-sboccatura prima della commercializzazione.
+        </p>
+    </div>
+</main>
+
+<a href="../index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>

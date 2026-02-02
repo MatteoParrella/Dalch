@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATI PROCESSO | Produzione Jägermeister</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child { 
+            color: var(--text-dim); 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+
+        .spec-row span:last-child { 
+            color: var(--text-main);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <span class="classification-tag">Process Engineering File — Archive #021-H</span>
+    <h1>Produzione <br>Jägermeister</h1>
+</header>
+
+<main>
+    <div class="technical-spec">
+        <h3 class="section-title">Parametri Chimico-Fisici</h3>
+        <div class="spec-row">
+            <span>Titolo Alcolometrico Finale</span>
+            <span>35% vol.</span>
+        </div>
+        <div class="spec-row">
+            <span>Base Alcolica</span>
+            <span>Alcol etilico di origine agricola</span>
+        </div>
+        <div class="spec-row">
+            <span>Componenti Botanici</span>
+            <span>56 erbe, radici, spezie e scorze</span>
+        </div>
+        <div class="spec-row">
+            <span>Periodo di Maturazione</span>
+            <span>≈ 12 mesi in botti di rovere</span>
+        </div>
+    </div>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3 class="section-title">Estrazione Botanica</h3>
+            <p>
+                Le 56 botaniche vengono essiccate, macinate e sottoposte
+                a macerazione in una soluzione idroalcolica.
+                Questo processo consente l’estrazione selettiva
+                di oli essenziali, resine e composti aromatici.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Filtrazione e Controllo</h3>
+            <p>
+                Dopo la macerazione, il liquido viene filtrato
+                per rimuovere i residui solidi.
+                Ogni lotto è sottoposto a controlli analitici
+                per garantire stabilità, uniformità e qualità sensoriale.
+            </p>
+        </div>
+    </div>
+
+    <div class="info-card" style="margin-top: 40px;">
+        <h3 class="section-title">Maturazione e Assemblaggio</h3>
+        <p>
+            Il concentrato viene lasciato maturare in botti di rovere
+            per circa un anno.
+            Successivamente viene miscelato con acqua, zucchero e alcol
+            fino al raggiungimento del profilo aromatico definitivo.
+        </p>
+        <p>
+            Prima dell’imbottigliamento, il prodotto viene ulteriormente
+            filtrato e stabilizzato.
+        </p>
+    </div>
+</main>
+
+<a href="../index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>

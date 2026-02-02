@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT: CLASE AZUL | Technical Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+        --text-main: #ffffff;      /* Bianco puro per titoli e testi importanti */
+        --text-secondary: #a0a0a0; /* Grigio chiaro per paragrafi e info secondarie */
+        --text-dim: #666666;       /* Grigio scuro per etichette e tag */
+        --border-color: #222222;   /* Colore per le linee divisorie */
+        --bg-box: #0a0a0a;         /* Grigio scurissimo per i contenitori */
+    }
+
+    body { 
+        background: #000; 
+        color: var(--text-main);   /* Imposta il testo di default su bianco */
+        padding: 60px; 
+        overflow-y: auto; 
+        height: auto;
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .dossier-header {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+    }
+
+    .classification-tag {
+        font-size: 0.65rem;
+        letter-spacing: 4px;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .dossier-title {
+        color: var(--text-main); /* Forza il titolo in bianco */
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: -2px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .grid-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .info-section h3 {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .info-section p {
+        line-height: 1.8;
+        color: var(--text-secondary); /* Grigio chiaro per i testi lunghi */
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .technical-spec {
+        background: var(--bg-box);
+        border: 1px solid var(--border-color);
+        padding: 30px;
+        margin-top: 40px;
+    }
+
+    .spec-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 0.85rem;
+    }
+
+    /* Etichetta (Sinistra) */
+    .spec-row span:first-child { 
+        color: var(--text-dim); 
+        text-transform: uppercase; 
+        letter-spacing: 1px; 
+    }
+
+    /* Valore (Destra) */
+    .spec-row span:last-child { 
+        color: var(--text-main); /* Forza il valore in bianco */
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 60px;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--text-main);
+        padding-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    .back-link:hover { 
+        color: var(--text-dim); 
+        border-color: var(--text-dim); 
+    }
+
+    /* Animazione entrata */
+    .fade-in {
+        animation: fadeInPage 1s ease-out forwards;
+    }
+
+    @keyframes fadeInPage {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body class="fade-in">
+
+    <header class="dossier-header">
+        <span class="classification-tag">Internal Use Only — Archive #001</span>
+        <h1 class="dossier-title">Clase Azul <br>Reposado</h1>
+    </header>
+
+    <main>
+        <div class="grid-info">
+            <div class="info-section">
+                <h3>Genesi e Territorio</h3>
+                <p>Prodotta nel cuore di Jalisco, questa unità rappresenta l'eccellenza della distillazione messicana. L'agave utilizzata viene coltivata per un periodo minimo di 6-8 anni in terre vulcaniche ad alta quota, fattore che conferisce al composto note minerali uniche.</p>
+                <p>Il processo di cottura avviene in forni di muratura tradizionali per 72 ore, trasformando gli amidi in zuccheri complessi attraverso un'esposizione termica controllata.</p>
+            </div>
+            <div class="info-section">
+                <h3>Artigianato Mazahua</h3>
+                <p>Ogni "Decanter" è un'opera d'arte individuale. Realizzata in ceramica bianca dai maestri artigiani del popolo Mazahua a Santa María Canchesda. La pittura viene eseguita rigorosamente a mano con ossido di cobalto, creando il celebre motivo a raggiera.</p>
+                <p>Una volta terminata, la bottiglia viene cotta a temperature elevate per cristallizzare la finitura, rendendola un oggetto da collezione eterno.</p>
+            </div>
+        </div>
+
+        <div class="technical-spec">
+            <h3>Scheda Tecnica Decanter</h3>
+            <div class="spec-row">
+                <span>Materiale</span>
+                <span>Ceramica di Alta Qualità</span>
+            </div>
+            <div class="spec-row">
+                <span>Tempo di Lavorazione</span>
+                <span>11 Giorni / 264 Ore</span>
+            </div>
+            <div class="spec-row">
+                <span>Tecnica Decoro</span>
+                <span>Pittura a Mano (Cobalto)</span>
+            </div>
+            <div class="spec-row">
+                <span>Invecchiamento Liquido</span>
+                <span>8 Mesi (Botti di Quercia Americana)</span>
+            </div>
+            <div class="spec-row">
+                <span>Origine</span>
+                <span>Los Altos de Jalisco</span>
+            </div>
+        </div>
+
+        
+
+        <div class="info-section" style="margin-top: 60px;">
+            <h3>Note di Invecchiamento</h3>
+            <p>A differenza dei prodotti standard, la variante Reposado riposa per otto mesi in botti di rovere americano precedentemente utilizzate per il bourbon. Questo processo di ossidazione lenta ammorbidisce l'intensità dell'agave, introducendo sfumature di vaniglia, nocciola e un retrogusto di caramello morbido.</p>
+        </div>
+    </main>
+
+    <a href="..\index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>

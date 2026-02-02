@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATI PROCESSO | Analisi Chimica Vodka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            overflow-y: auto; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Tabella Tecnica */
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child { 
+            color: var(--text-dim); 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+
+        .spec-row span:last-child { 
+            color: var(--text-main);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { color: var(--text-dim); border-color: var(--text-dim); }
+
+        .fade-in { animation: fadeInPage 1s ease-out forwards; }
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="fade-in">
+
+    <header class="report-header">
+        <span class="classification-tag">Chemical Analysis — Archive #002-B</span>
+        <h1>Parametri di <br>Purificazione</h1>
+    </header>
+
+    <main>
+        <div class="technical-spec">
+            <h3 class="section-title">Composizione e Purezza</h3>
+            <div class="spec-row">
+                <span>Concentrazione Etanolo</span>
+                <span>40.0% v/v (Standard)</span>
+            </div>
+            <div class="spec-row">
+                <span>Materia Prima</span>
+                <span>Frumento Invernale / Cereali selezionati</span>
+            </div>
+            <div class="spec-row">
+                <span>Metodo di Distillazione</span>
+                <span>Continua a Colonna (Frazionata)</span>
+            </div>
+            <div class="spec-row">
+                <span>Agente Filtrante</span>
+                <span>Carbone Attivo di Betulla</span>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <div class="info-card">
+                <h3 class="section-title">Distillazione Continua</h3>
+                <p>A differenza della distillazione discontinua, questo processo utilizza colonne di rettifica che permettono un ciclo ininterrotto. L'etanolo viene separato con estrema precisione dai congeneri e dagli oli di fuso, garantendo un profilo chimico neutro e l'assenza quasi totale di impurità organiche.</p>
+            </div>
+            <div class="info-card">
+                <h3 class="section-title">Filtrazione Molecolare</h3>
+                <p>Il distillato grezzo viene fatto passare attraverso letti di carbone attivo. Questo passaggio non è solo meccanico, ma chimico: i micropori del carbone catturano le tracce residue di composti aromatici indesiderati, stabilizzando il pH e conferendo al liquido la sua caratteristica limpidezza cristallina.</p>
+            </div>
+        </div>
+
+        
+
+[Image of fractional distillation column diagram]
+
+
+        <div class="info-card" style="margin-top: 40px;">
+            <h3 class="section-title">Integrazione Idrica</h3>
+            <p>L'acqua utilizzata per la diluizione finale proviene da pozzi artesiani profondi o sorgenti glaciali. Viene sottoposta a un processo di demineralizzazione e osmosi inversa per assicurare che non vi siano interferenze minerali nel legame molecolare con l'etanolo, mantenendo la neutralità sensoriale del prodotto.</p>
+        </div>
+    </main>
+
+    <a href="../index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>

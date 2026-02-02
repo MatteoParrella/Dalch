@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT: JÄGERMEISTER | Technical Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+        --text-main: #ffffff;
+        --text-secondary: #a0a0a0;
+        --text-dim: #666666;
+        --border-color: #222222;
+        --bg-box: #0a0a0a;
+    }
+
+    body { 
+        background: #000; 
+        color: var(--text-main);
+        padding: 60px; 
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .dossier-header {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+    }
+
+    .classification-tag {
+        font-size: 0.65rem;
+        letter-spacing: 4px;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .dossier-title {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: -2px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .grid-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .info-section h3 {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .info-section p {
+        line-height: 1.8;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+    }
+
+    .technical-spec {
+        background: var(--bg-box);
+        border: 1px solid var(--border-color);
+        padding: 30px;
+        margin-top: 40px;
+    }
+
+    .spec-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid #1a1a1a;
+        font-size: 0.85rem;
+    }
+
+    .spec-row span:first-child { 
+        color: var(--text-dim); 
+        text-transform: uppercase; 
+        letter-spacing: 1px; 
+    }
+
+    .spec-row span:last-child { 
+        color: var(--text-main); 
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 60px;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--text-main);
+        padding-bottom: 5px;
+    }
+
+    .fade-in {
+        animation: fadeInPage 1s ease-out forwards;
+    }
+
+    @keyframes fadeInPage {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body class="fade-in">
+
+<header class="dossier-header">
+    <span class="classification-tag">Herbal Liqueur File — Archive #014-B</span>
+    <h1 class="dossier-title">Jägermeister</h1>
+</header>
+
+<main>
+    <div class="grid-info">
+
+        <div class="info-section">
+            <h3>Composizione Erboristica</h3>
+            <p>
+                Jägermeister è un liquore erboristico tedesco ottenuto
+                da una miscela segreta di 56 erbe, radici, fiori, semi e spezie.
+                Tra le note aromatiche riconoscibili figurano agrumi, liquirizia,
+                anice, zenzero, cannella e spezie amare.
+            </p>
+            <p>
+                La ricetta completa è riservata e custodita dalla casa produttrice
+                Mast-Jägermeister SE.
+            </p>
+        </div>
+
+        <div class="info-section">
+            <h3>Processo di Produzione</h3>
+            <p>
+                Le botaniche vengono macerate in una soluzione di acqua e alcol,
+                filtrate e successivamente lasciate maturare in botti di rovere
+                per circa un anno.
+            </p>
+            <p>
+                Dopo l’invecchiamento, il liquido viene raffinato, addolcito,
+                portato alla gradazione finale e imbottigliato.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="technical-spec">
+        <h3>Scheda Tecnica del Prodotto</h3>
+        <div class="spec-row">
+            <span>Categoria</span>
+            <span>Liquore Erboristico</span>
+        </div>
+        <div class="spec-row">
+            <span>Gradazione Alcolica</span>
+            <span>35% Vol.</span>
+        </div>
+        <div class="spec-row">
+            <span>Ingredienti Botanici</span>
+            <span>56 (ricetta segreta)</span>
+        </div>
+        <div class="spec-row">
+            <span>Metodo</span>
+            <span>Macerazione e Invecchiamento in Rovere</span>
+        </div>
+        <div class="spec-row">
+            <span>Origine</span>
+            <span>Wolfenbüttel, Germania</span>
+        </div>
+        <div class="spec-row">
+            <span>Anno di Creazione</span>
+            <span>1934</span>
+        </div>
+    </div>
+
+    <div class="info-section" style="margin-top: 60px;">
+        <h3>Uso e Contesto Culturale</h3>
+        <p>
+            Storicamente associato alla tradizione dei digestivi,
+            Jägermeister è oggi consumato principalmente come shot freddo
+            o come ingrediente per cocktail.
+        </p>
+        <p>
+            Come tutte le bevande alcoliche, il consumo deve essere moderato
+            e consapevole.
+        </p>
+    </div>
+</main>
+
+<a href="../index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>

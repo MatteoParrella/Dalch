@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATI PROCESSO | Analisi Tecnica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            overflow-y: auto; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Tabella Tecnica */
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child { 
+            color: var(--text-dim); 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+
+        .spec-row span:last-child { 
+            color: var(--text-main);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { color: var(--text-dim); border-color: var(--text-dim); }
+
+        .fade-in { animation: fadeInPage 1s ease-out forwards; }
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="fade-in">
+
+    <header class="report-header">
+        <span class="classification-tag">Chemical Analysis — Archive #001-B</span>
+        <h1>Specifiche di <br>Raffinazione</h1>
+    </header>
+
+    <main>
+        <div class="technical-spec">
+            <h3 class="section-title">Composizione e Parametri</h3>
+            <div class="spec-row">
+                <span>Concentrazione Etanolo</span>
+                <span>40.0% v/v</span>
+            </div>
+            <div class="spec-row">
+                <span>Materia Prima</span>
+                <span>100% Agave Tequilana Weber</span>
+            </div>
+            <div class="spec-row">
+                <span>Residuo Fisso</span>
+                <span>0.18% - 0.22%</span>
+            </div>
+            <div class="spec-row">
+                <span>pH Analitico</span>
+                <span>4.2 - 4.5</span>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <div class="info-card">
+                <h3 class="section-title">Idrolisi Termica</h3>
+                <p>Le pigne di agave subiscono una cottura lenta in forni di muratura (hornos). Questo processo di 72 ore garantisce una conversione enzimatica ottimale dell'inulina in zuccheri fermentabili, preservando i precursori aromatici complessi.</p>
+            </div>
+            <div class="info-section">
+                <h3 class="section-title">Distillazione Frazionata</h3>
+                <p>Il mosto fermentato viene sottoposto a una doppia distillazione in alambicchi di rame tradizionali. La separazione accurata di "teste" e "code" permette di isolare solo il "cuore" del distillato, garantendo una purezza chimica superiore e l'assenza di alcoli superiori indesiderati.</p>
+            </div>
+        </div>
+
+        
+
+        <div class="info-card" style="margin-top: 40px;">
+            <h3 class="section-title">Evoluzione in Quercia</h3>
+            <p>Il filtraggio finale avviene tramite sistemi a gravità prima dell'immissione in botti di quercia bianca americana. Durante gli 8 mesi di riposo, avvengono reazioni di esterificazione che stabilizzano il profilo organolettico, riducendo l'astringenza e incrementando la densità molecolare del prodotto finito.</p>
+        </div>
+    </main>
+
+    <a href="..\index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>

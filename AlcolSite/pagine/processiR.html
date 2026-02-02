@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROCESS REPORT | Jack Daniel’s</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 60px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child {
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec-row span:last-child {
+            color: var(--text-main);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 60px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+
+        .fade-in {
+            animation: fadeInPage 1s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <span class="classification-tag">Process Engineering File — Archive #JD-P</span>
+    <h1>Jack Daniel’s <br>Production</h1>
+</header>
+
+<main>
+
+    <div class="technical-spec">
+        <h3 class="section-title">Parametri di Produzione</h3>
+        <div class="spec-row">
+            <span>Categoria</span>
+            <span>Tennessee Whiskey</span>
+        </div>
+        <div class="spec-row">
+            <span>Miscela di Cereali</span>
+            <span>80% Mais · 12% Orzo Maltato · 8% Segale</span>
+        </div>
+        <div class="spec-row">
+            <span>Metodo Distintivo</span>
+            <span>Lincoln County Process</span>
+        </div>
+        <div class="spec-row">
+            <span>Gradazione Finale</span>
+            <span>40% Vol.</span>
+        </div>
+    </div>
+
+    <div class="grid-layout">
+
+        <div class="info-card">
+            <h3 class="section-title">Macinazione e Cottura</h3>
+            <p>
+                I cereali vengono macinati e cotti separatamente
+                in acqua calcarea naturale priva di ferro.
+                Il calore consente la conversione degli amidi
+                in zuccheri fermentabili,
+                creando un mosto ricco e stabile.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Fermentazione</h3>
+            <p>
+                Il mosto viene trasferito in grandi vasche di fermentazione
+                e inoculato con lieviti selezionati.
+                Il processo dura diversi giorni,
+                producendo un wash a bassa gradazione
+                ricco di composti aromatici.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Distillazione</h3>
+            <p>
+                La distillazione avviene in colonne continue,
+                ottenendo un distillato limpido
+                ad alta gradazione.
+                Questa fase separa le componenti indesiderate
+                preservando il cuore aromatico.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Filtrazione al Carbone</h3>
+            <p>
+                Prima dell’invecchiamento,
+                il distillato viene filtrato lentamente
+                attraverso carbone di acero zuccherino.
+                Questo processo, noto come Lincoln County Process,
+                ammorbidisce il profilo sensoriale del whiskey.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">Invecchiamento</h3>
+            <p>
+                Il whiskey viene invecchiato in botti nuove
+                di rovere americano carbonizzato.
+                Durante la maturazione,
+                avvengono reazioni di ossidazione ed estrazione
+                che definiscono colore, aroma e struttura.
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+<a href="../index.html" class="back-link">← Return to Archive</a>
+
+</body>
+</html>

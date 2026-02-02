@@ -1,0 +1,212 @@
+:root {
+    --bg: #030303;
+    --fg: #ffffff;
+    --gray: rgba(255, 255, 255, 0.4);
+    --border: rgba(255, 255, 255, 0.08);
+    --glass: rgba(255, 255, 255, 0.03);
+    --accent-red: #ff3b30;
+    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- BACKGROUND VIDEO SECTION --- */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.1) saturate(1.2); /* Look Cinematico */
+    transition: opacity 1s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient scuro ai bordi per far risaltare l'UI */
+    background: radial-gradient(circle, transparent 10%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+}
+
+/* --- UI HEADER --- */
+.ui-header {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#bottle-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem; /* Molto piccolo e discreto */
+    letter-spacing: 20px; /* Spaziatura estrema per eleganza */
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Aggiungi un piccolo pseudo-elemento per simulare un codice catalogo */
+#bottle-name::before {
+    content: "DB-REF // ";
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+
+/* --- SIDEBAR (ARCHIVE LOOK) --- */
+.side-nav {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 1px solid var(--border);
+    padding-left: 25px;
+}
+
+.side-nav-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    color: var(--gray);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.bottle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    color: var(--gray);
+    font-size: 0.75rem;
+    text-align: left;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 4px 0;
+}
+.signature {
+    position: absolute;
+    bottom: 40px;      /* Allineata ai pulsanti e alla sidebar */
+    right: 40px;       /* Posizionata a destra */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    color: var(--gray);
+    z-index: 150;      /* Sopra il video e l'overlay */
+    text-transform: uppercase;
+    pointer-events: none; /* Non intralcia eventuali click */
+}
+
+.signature span {
+    color: rgba(255, 255, 255, 0.7); /* Nome leggermente più luminoso */
+    font-weight: 800;
+}
+.nav-item:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+.nav-item.active {
+    color: #fff;
+    font-weight: 800;
+    padding-left: 12px;
+}
+
+/* --- BOTTOM DOCK (ACTION BUTTONS) --- */
+.action-buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: var(--glass);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px;
+    z-index: 100;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.btn-modern {
+    background: transparent;
+    border: none;
+    color: var(--gray);
+    padding: 14px 32px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.btn-modern:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-modern.danger:hover {
+    color: var(--accent-red);
+    text-shadow: 0 0 10px rgba(255, 59, 48, 0.3);
+}
+
+/* --- NAVIGATION ARROWS --- */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.2;
+    transition: var(--transition);
+    padding: 30px;
+}
+
+.nav-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.prev { right: 100px; left: auto; }
+.next { right: 40px; }
+
+/* Rimosso .viewer-container e model-viewer perché obsoleti */

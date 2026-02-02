@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAZARD REPORT | Analisi dei Rischi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+            --danger-red: #ff3b30;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            overflow-y: auto; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--danger-red);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .risk-level {
+            text-align: right;
+            border-left: 1px solid var(--border-color);
+            padding-left: 20px;
+        }
+
+        .risk-level small { color: var(--text-dim); font-size: 0.6rem; letter-spacing: 2px; }
+        .risk-level div { color: var(--danger-red); font-weight: 700; font-size: 1.2rem; }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .hazard-card p {
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Box Normativa Speciale */
+        .regulation-box {
+            background: var(--bg-box);
+            border: 1px solid var(--danger-red);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .regulation-box h3 {
+            color: var(--danger-red);
+            font-size: 0.9rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { color: var(--text-dim); border-color: var(--text-dim); }
+
+        .fade-in { animation: fadeInPage 1s ease-out forwards; }
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="fade-in">
+
+    <header class="report-header">
+        <div>
+            <span class="classification-tag">Safety Protocol — Archive #001-H</span>
+            <h1>Hazard <br>Analysis</h1>
+        </div>
+        <div class="risk-level">
+            <small>EXPOSURE RISK</small>
+            <div>HIGH / CRITICAL</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="analysis-grid">
+            <section class="hazard-card">
+                <h3 class="section-title">01. Proprietà Infiammabili</h3>
+                <p>L'alta concentrazione di etanolo conferisce al composto un punto di infiammabilità (flash point) relativamente basso. In condizioni di stoccaggio non idonee, i vapori saturi possono innescare combustioni rapide. È necessaria la manipolazione lontano da fonti di calore ad alta intensità.</p>
+            </section>
+
+            <section class="hazard-card">
+                <h3 class="section-title">02. Impatto Neurochimico</h3>
+                <p>La sostanza agisce come un modulatore allosterico positivo dei recettori GABA-A. Questo comporta una depressione generalizzata del sistema nervoso centrale (SNC), causando un significativo rallentamento delle funzioni cognitive, dei riflessi motori e una marcata alterazione della percezione sensoriale.</p>
+            </section>
+
+            <section class="hazard-card">
+                <h3 class="section-title">03. Tossicità Epatica</h3>
+                <p>L'ossidazione dell'etanolo produce acetaldeide, un metabolita altamente reattivo e citotossico. L'esposizione prolungata o eccessiva provoca stress ossidativo a livello mitocondriale nelle cellule epatiche, portando a danni strutturali permanenti e interferendo con la sintesi lipidica del fegato.</p>
+            </div>
+
+            <section class="hazard-card">
+                <h3 class="section-title">04. Integrità Sistemica</h3>
+                <p>Oltre al fegato, l'etanolo influisce sull'equilibrio osmotico e sulla permeabilità della barriera emato-encefalica. Può causare disidratazione cellulare sistemica e squilibri elettrolitici che influenzano negativamente la funzione cardiovascolare e renale.</p>
+            </section>
+        </div>
+
+        
+
+        <div class="regulation-box">
+            <h3>Protocollo di Sicurezza e Normative</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 0;">
+                A causa della sua natura chimica e degli impatti documentati sullo sviluppo del sistema nervoso, la somministrazione e il possesso sono rigorosamente limitati. In conformità con le leggi sulla salute pubblica, l'accesso è interdetto ai minori di 18 anni per prevenire alterazioni nello sviluppo neuronale e danni organici precoci.
+            </p>
+        </div>
+    </main>
+
+    <a href="..\index.html" class="back-link">← Return to Database</a>
+
+</body>
+</html>

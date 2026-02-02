@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY REPORT | Jack Daniel’s</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .report-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .timeline-box {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+        }
+
+        .timeline-box p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+        }
+
+        .fade-in {
+            animation: fadeInPage 1s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+
+<header class="report-header">
+    <span class="classification-tag">Historical Record — Archive #JD-H</span>
+    <h1>History <br>of Jack Daniel’s</h1>
+</header>
+
+<main>
+
+    <div class="grid-layout">
+        <div class="info-card">
+            <h3 class="section-title">Le Origini</h3>
+            <p>
+                Jack Daniel’s nasce negli Stati Uniti,
+                nello stato del Tennessee, nella seconda metà del XIX secolo.
+                Jasper Newton “Jack” Daniel fonda ufficialmente
+                la distilleria nel 1866,
+                rendendola una delle più antiche distillerie registrate del paese.
+            </p>
+            <p>
+                Jack Daniel apprende l’arte della distillazione
+                in giovane età,
+                sviluppando un metodo produttivo
+                basato su precisione, controllo e ripetibilità.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3 class="section-title">La Grotta di Lynchburg</h3>
+            <p>
+                La distilleria viene stabilita a Lynchburg, Tennessee,
+                in prossimità di una sorgente d’acqua calcarea naturale,
+                priva di ferro.
+                Questa risorsa diventa un elemento fondamentale
+                per la qualità del whiskey prodotto.
+            </p>
+            <p>
+                L’acqua pura contribuisce alla fermentazione
+                e alla diluizione finale,
+                riducendo interferenze minerali indesiderate.
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-box">
+        <h3 class="section-title">Il Metodo Lincoln County</h3>
+        <p>
+            L’elemento distintivo di Jack Daniel’s
+            è l’adozione del Lincoln County Process,
+            una filtrazione lenta del distillato
+            attraverso carbone di acero zuccherino.
+        </p>
+        <p>
+            Questo passaggio, effettuato prima dell’invecchiamento,
+            ammorbidisce il profilo organolettico
+            e differenzia il Tennessee Whiskey
+            dal bourbon tradizionale.
+        </p>
+    </div>
+
+    <div class="info-card" style="margin-top: 50px;">
+        <h3 class="section-title">Espansione Globale</h3>
+        <p>
+            Nel corso del XX secolo,
+            Jack Daniel’s supera i confini nazionali
+            diventando uno dei whiskey americani
+            più riconoscibili a livello mondiale.
+        </p>
+        <p>
+            Oggi il marchio è sinonimo di identità americana,
+            tradizione industriale e standardizzazione controllata,
+            mantenendo invariati i principi produttivi originari.
+        </p>
+    </div>
+
+</main>
+
+<a href="../index.html" class="back-link">← Return to Archive</a>
+
+</body>
+</html>

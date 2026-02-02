@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT: VODKA ORIGINS | Technical Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-dim: #666666;
+            --border-color: #222222;
+            --bg-box: #0a0a0a;
+        }
+
+        body { 
+            background: #000; 
+            color: var(--text-main);
+            padding: 60px; 
+            overflow-y: auto; 
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .dossier-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .classification-tag {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .dossier-title {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .info-section h3 {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .technical-spec {
+            background: var(--bg-box);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 0.85rem;
+        }
+
+        .spec-row:last-child { border-bottom: none; }
+
+        .spec-row span:first-child { color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        .spec-row span:last-child { color: var(--text-main); }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 60px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { color: var(--text-dim); border-color: var(--text-dim); }
+
+        .fade-in { animation: fadeInPage 1s ease-out forwards; }
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="fade-in">
+
+    <header class="dossier-header">
+        <span class="classification-tag">Historical Archive — Unit #002</span>
+        <h1 class="dossier-title">Evoluzione <br>della Vodka</h1>
+    </header>
+
+    <main>
+        <div class="grid-info">
+            <div class="info-section">
+                <h3>Radici Geopolitiche</h3>
+                <p>La vodka affonda le sue radici nell'Europa dell'Est, con una disputa storica tra Russia e Polonia per la paternità del termine, che deriva dal diminutivo slavo "voda" (acqua). Originariamente utilizzata per scopi medicinali, la produzione si è evoluta drasticamente nel XIV secolo.</p>
+                <p>Le prime distillazioni sfruttavano cereali locali come segale e frumento, adattandosi alle rigide condizioni climatiche del Nord Europa, dove la purezza del liquido era fondamentale per la conservazione.</p>
+            </div>
+            <div class="info-section">
+                <h3>Rivoluzione Industriale</h3>
+                <p>Nel XIX secolo, l'introduzione della distillazione a colonna ha permesso di ottenere un prodotto con livelli di purezza molecolare senza precedenti. Questo ha trasformato la vodka da un distillato rustico a uno spirito neutro e cristallino.</p>
+                <p>La tecnica del filtraggio attraverso carbone attivo di betulla, perfezionata in questo periodo, è diventata lo standard per rimuovere le impurità organiche residue e garantire un profilo sensoriale estremamente pulito.</p>
+            </div>
+        </div>
+
+        
+
+        <div class="technical-spec">
+            <h3>Parametri Storici e Tecnici</h3>
+            <div class="spec-row">
+                <span>Etimologia</span>
+                <span>Voda (Piccola Acqua)</span>
+            </div>
+            <div class="spec-row">
+                <span>Materie Prime Storiche</span>
+                <span>Segale, Frumento, Patate</span>
+            </div>
+            <div class="spec-row">
+                <span>Standard di Purezza</span>
+                <span>Filtraggio a Carbone Attivo</span>
+            </div>
+            <div class="spec-row">
+                <span>Regioni di Origine</span>
+                <span>Russia, Polonia, Svezia</span>
+            </div>
+        </div>
+
+        <div class="info-section" style="margin-top: 60px;">
+            <h3>Dallo Zar al Mercato Globale</h3>
+            <p>Con l'emigrazione post-rivoluzionaria, le tecniche di produzione si sono diffuse in tutto il mondo. La vodka moderna è oggi caratterizzata da una versatilità chimica unica, definita dalla sua capacità di integrarsi in strutture molecolari complesse senza alterarne l'equilibrio cromatico o aromatico, rendendola lo standard per la miscelazione avanzata.</p>
+        </div>
+    </main>
+
+    <a href="..\index.html" class="back-link">← Return to Collection</a>
+
+</body>
+</html>
