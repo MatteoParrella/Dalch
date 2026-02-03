@@ -1,4 +1,4 @@
-# ALCOLSITE 🍸
+# DALCH 🍸
 
 ALCOLSITE è un **sito web statico** a scopo **didattico** dedicato al mondo degli alcolici.  
 Il progetto presenta la **storia**, i **processi di produzione** e i **rischi per la salute**
