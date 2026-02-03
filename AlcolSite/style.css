@@ -210,3 +210,84 @@ body {
 .next { right: 40px; }
 
 /* Rimosso .viewer-container e model-viewer perché obsoleti */
+/* --- OTTIMIZZAZIONE PER MOBILE (Media Queries) --- */
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Permette lo scroll verticale su telefono */
+        height: auto;
+        width: 100%;
+    }
+
+    /* Ridimensiona il titolo in alto */
+    .ui-header {
+        top: 30px;
+    }
+
+    #bottle-name {
+        font-size: 0.6rem;
+        letter-spacing: 8px; /* Riduciamo la spaziatura estrema per farlo stare in una riga */
+    }
+
+    /* Trasformiamo la Sidebar in una riga orizzontale sopra i pulsanti o la nascondiamo */
+    .side-nav {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin-top: 100px;
+        padding: 0 20px;
+        border-left: none;
+        border-bottom: 1px solid var(--border);
+        align-items: center;
+    }
+
+    .bottle-list {
+        flex-direction: row; /* Elementi uno accanto all'altro */
+        overflow-x: auto;    /* Se sono tanti, si scrollano lateralmente */
+        width: 100%;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .nav-item {
+        white-space: nowrap;
+        font-size: 0.6rem;
+    }
+
+    /* Adattiamo il Dock dei pulsanti in basso */
+    .action-buttons {
+        position: fixed; /* Lo teniamo fisso in basso */
+        width: 90%;
+        bottom: 20px;
+        padding: 4px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .btn-modern {
+        padding: 10px 15px;
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+    }
+
+    /* Frecce di navigazione: le mettiamo più piccole o le nascondiamo */
+    .nav-btn {
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .prev { right: 70px; }
+    .next { right: 20px; }
+
+    /* Firma in basso a destra */
+    .signature {
+        bottom: 80px; /* Altrimenti finisce sotto i pulsanti */
+        right: 20px;
+        font-size: 0.45rem;
+    }
+}
+#bg-video {
+    background: #030303 url('fallback-image.jpg') no-repeat center center;
+    background-size: cover;
+}
